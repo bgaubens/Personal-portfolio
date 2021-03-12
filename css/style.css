@@ -1,0 +1,292 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Header section */
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.color-container {
+    flex-basis: 20%;
+}
+
+header .blue {
+    background-color: #0468BF;
+    transition: 1s;
+}
+
+header .cyan {
+    background-color: #049DBF;
+    transition: 1s;
+}
+
+header .green {
+    background-color: #3B592D;
+    transition: 1s;
+}
+
+header .orange {
+    background-color: #D99E6A;
+    transition: 1s;
+}
+
+header .brown {
+    background-color: #8C4332;
+    transition: 1s;
+}
+
+header .blue:hover {
+    background-color: #049DBF;
+}
+
+header .cyan:hover {
+    background-color: #3B592D;
+}
+
+header .green:hover {
+    background-color: #D99E6A;
+}
+
+header .orange:hover {
+    background-color: #8C4332;
+}
+
+header .brown:hover {
+    background-color: #0468BF;
+}
+
+/* Hero section */
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 5em 1em;
+}
+
+.hero h1 {
+    font-size: 2em;
+}
+
+.hero p {
+    font-size: 1.3em;
+}
+
+.hero .image-container {
+    position: relative;
+    border-radius: 50%;
+    width: 30%;
+    min-width: 250px;
+    border: 3px solid #049DBF;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.hero img:first-child {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.hero img:nth-child(2) {
+    display: block;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    transition: 1s;
+}
+
+img:nth-child(2):hover {
+    opacity: 0.5;
+}
+
+.hero .hero-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 1% 5%;
+}
+
+/* Hero section - Responsiveness */
+
+@media screen and (max-width: 660px) {
+    .hero .hero-content {
+        text-align: center;
+    }
+  }
+
+/* Portfolion section */
+
+.portfolio {
+    border-top: 2px solid black;
+    padding: 1.3em 0em;
+}
+
+.portfolio h1 {
+    font-size: 1.4em;
+    margin: 1em 2em;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+main .card {
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    border: 2px solid #0468BF;
+    margin: 3%;
+}
+
+main img {
+    height: 200px;
+    border-bottom: 2px solid #111111;
+}
+
+main .card-content {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 6% 10%;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.card-content p {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Curriculum section */
+
+.curriculum {
+    border-top: 2px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 1.3em 0em;
+}
+
+.curriculum .cv-section {
+    margin: 1em;
+    padding: 2em;
+    border-bottom: 2px solid #FFFFFF;
+    transition: 0.5s;
+}
+
+.curriculum .cv-section:hover {
+    border-bottom: 2px solid #D99E6A;
+}
+
+/* Curriculum section - Responsiveness */
+
+@media screen and (max-width: 1020px) {
+    
+    .curriculum {
+        justify-content: center;
+    }
+
+    .curriculum .cv-section {
+        text-align: center;
+    }
+
+  }
+
+/* Social section */
+
+.social {
+    border-top: 2px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5% 3%;
+}
+
+.social h1 {
+    margin: 1em;
+}
+
+.social .icon-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 35%;
+    box-shadow: 0px 0px 18px 0px rgb(50 77 215 / 14%);
+    border-radius: 15px;
+    margin: 1em;
+    height: 80px;
+}
+
+.social img {
+    height: 40px;
+    margin: 1em 1.5em;
+    transition: 0.4s;
+}
+
+.social img:hover {
+    height: 50px;
+}
+
+/* Contact section */
+
+.contact {
+    border-top: 2px solid #111111;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 5%;
+    align-items: center;
+}
+
+.contact .contact-container {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5%;
+    align-items: center;
+}
+
+.contact span {
+    font-size: 2em;
+    transition: 0.4s;
+}
+
+.contact span:hover {
+    color: #049DBF;
+}
+
+/* Contact section - Responsiveness */
+
+@media screen and (max-width: 600px) {
+    
+    .contact {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+  }
